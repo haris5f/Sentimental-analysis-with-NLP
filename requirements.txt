@@ -11,5 +11,4 @@ librosa==0.9.1
 requests
 Jinja2==2.10.1
 itsdangerous==2.0.1
-tensorflow-cpu
 scipy

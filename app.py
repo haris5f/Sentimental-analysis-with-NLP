@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify, render_template
 from tensorflow import keras
 import pickle
 from keras.preprocessing.sequence import pad_sequences
-#import librosa
+import librosa
 from scipy.io import wavfile
 
 
@@ -43,8 +43,8 @@ def upload_file():
     if request.method == 'POST':
         f = request.files["audiofile"]
         if f:
-            #x_t,sr_t = librosa.load(f,duration=3, offset=0, res_type='kaiser_fast')  # read audio file
-            sr_t, x_t = wavfile.read('output.wav')
+            x_t,sr_t = librosa.load(f,duration=3, offset=0, res_type='kaiser_fast')  # read audio file
+            #sr_t, x_t = wavfile.read('output.wav')
             x_t = extract_feature(x_t,sr_t)
             x_t =np.array(x_t)
             x_t = sc.transform(x_t.reshape(1, -1))
@@ -56,3 +56,4 @@ def upload_file():
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0',port=8080)
+    #app.run(debug=True)
