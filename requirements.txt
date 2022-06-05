@@ -12,4 +12,4 @@ requests
 Jinja2==2.10.1
 itsdangerous==2.0.1
 scipy
-tensorflow-cpu
+--no-cache-dir tensorflow
