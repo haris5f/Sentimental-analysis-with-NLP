@@ -1,8 +1,7 @@
-pandas==1.4.2
-numpy==1.22.2
+pandas
+numpy
 scikit-learn
-itsdangerous==1.1.0
-Jinja2==2.10.1
+itsdangerous
 MarkupSafe==1.1.1
 Werkzeug==0.15.5
 Flask==1.1.2
@@ -11,3 +10,4 @@ keras==2.8.0
 Keras-Preprocessing==1.1.2
 librosa==0.9.1
 requests
+Jinja2==2.10.1
